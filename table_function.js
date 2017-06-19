@@ -31,7 +31,7 @@
 
 //	}
 // cell id should be number 1-9
-
+var SE = [];
 var cell = 0; /* kintamasis cell rasomas virs funkciju kad galiotu abiem, 
 o ne tik vienai. parasyta viduje funkcijos veiks tik toje funkcijoje.*/
 function random_spalvos() {
@@ -42,7 +42,10 @@ function random_spalvos() {
 	 } 
 	 document.getElementById(cell).style.backgroundColor = random_color();
 	 document.getElementById("numeris").innerHTML = "<h1>" + cell + "</h1>";
+	 numeris.style.backgroundColor = random_color();
 
+	 SE.push(cell);				/* prideda isrinkta sakiciu prie eiles galo */
+	 sarasas.innerHTML = SE;
 }
 
 function iseiles_spalvos() {
@@ -55,9 +58,15 @@ function iseiles_spalvos() {
 	 	document.getElementById(a).style.backgroundColor = "red";
 	 } 
 	 document.getElementById(cell).style.backgroundColor = random_color();
-	 document.getElementById("numeris").innerHTML = "<h1>" + cell + "</h1>";
-
+		var numeris = document.getElementById("numeris");
+	 			numeris.innerHTML = "<h1>" + cell + "</h1>"; /* uzduotis: kad isrinkto langelio skaicius 
+	 			butu parasytas atskirame div'e - kodo eilute pakeicia div'o reiksme i cell kintamojo reiksme */
+			numeris.style.backgroundColor = random_color();
+	 	SE.push(cell);				/* prideda isrinkta sakiciu prie eiles galo */
+	    sarasas.innerHTML = SE;
 }
+
+
 
 function random_color() {
         var letters = '0123456789ABCDEF'; // masyve yra 16 simboliu
