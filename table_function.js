@@ -58,10 +58,12 @@ function iseiles_spalvos() {
 }
 
 function random_color() {
-        var letters = '0123456789ABCDEF';
+        var letters = '0123456789ABCDEF'; // masyve yra 16 simboliu
         var color = '#';
-        for (var i = 0; i < 6; i++ ) {
-            color += letters[Math.floor(Math.random() * 16)];
+        for (var i = 0; i < 6; i++ ) { /* ++i pirmiausia prides vieneta, 
+        	o i++ prides vieneta funkcijai pasibaigus */ // var i nurodo simbolio pozicija
+            color += letters[Math.floor(Math.random() * 16)]; /* += lieka groteles ir prie ju prisideda letters reiksme
+            jei butu tik = pakeistume color kintamojo reiksme */
         }
         return color;
     }
