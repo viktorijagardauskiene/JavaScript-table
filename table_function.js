@@ -41,6 +41,7 @@ function random_spalvos() {
 	 	document.getElementById(a).style.backgroundColor = "red";
 	 } 
 	 document.getElementById(cell).style.backgroundColor = random_color();
+	 document.getElementById("numeris").innerHTML = "<h1>" + cell + "</h1>";
 
 }
 
@@ -54,6 +55,7 @@ function iseiles_spalvos() {
 	 	document.getElementById(a).style.backgroundColor = "red";
 	 } 
 	 document.getElementById(cell).style.backgroundColor = random_color();
+	 document.getElementById("numeris").innerHTML = "<h1>" + cell + "</h1>";
 
 }
 
@@ -71,3 +73,13 @@ function random_color() {
 
 	//return color_string; // "rgb([0-255], [0-255], [0-255])" pvz: "rgb(128, 128, 128)"
 //}
+
+// ANTROS LENTELES FUNKCIJOS
+
+function random_skaicius() {
+	var cell1 = 0; 
+	 cell1 = Math.floor(Math.random()*9);
+
+	 document.getElementById("numeris").innerHTML = "cell1";
+}
+
