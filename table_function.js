@@ -83,12 +83,10 @@ function random_color() {
 	//return color_string; // "rgb([0-255], [0-255], [0-255])" pvz: "rgb(128, 128, 128)"
 //}
 
-// ANTROS LENTELES FUNKCIJOS
+// ND gali iskristi tik 6 skaiciai, po sesiu skaiciu atsiranda lentele kad zaidimas baigtas
+// panaudoti bootstrap
+// prideti mygtuka Nasujas zaidimas, kuris viska isvalo ir prasideda is naujo
+// paspaudus Naujas zaidimas apacioje sugeneruoja sesis skaitmenis kurie lieka (turetu patikrinti ar iskrite skaiciai sutampa su bilieto skaiciais)
 
-function random_skaicius() {
-	var cell1 = 0; 
-	 cell1 = Math.floor(Math.random()*9);
 
-	 document.getElementById("numeris").innerHTML = "cell1";
-}
 
