@@ -32,26 +32,40 @@
 //	}
 // cell id should be number 1-9
 
-var cell = 0;
+var cell = 0; /* kintamasis cell rasomas virs funkciju kad galiotu abiem, 
+o ne tik vienai. parasyta viduje funkcijos veiks tik toje funkcijoje.*/
 function random_spalvos() {
-	 cell = Math.floor(Math.random()*9) +1;
+	 cell = Math.floor(Math.random()*8) +1;
 
 	 for (a = 1; a <= 9; ++a) {
 	 	document.getElementById(a).style.backgroundColor = "red";
 	 } 
-	 document.getElementById(cell).style.backgroundColor = "white";
+	 document.getElementById(cell).style.backgroundColor = random_color();
 
 }
 
 function iseiles_spalvos() {
-	if(cell >= 9) {
-		cel = 1;
+	if (cell >= 9) {
+		cell = 1;
 	} else {
 		cell = cell + 1;
 	}
 	for (a = 1; a <= 9; ++a) {
 	 	document.getElementById(a).style.backgroundColor = "red";
 	 } 
-	 document.getElementById(cell).style.backgroundColor = "white";
+	 document.getElementById(cell).style.backgroundColor = random_color();
 
 }
+
+function random_color() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+
+	//return color_string; // "rgb([0-255], [0-255], [0-255])" pvz: "rgb(128, 128, 128)"
+//}
