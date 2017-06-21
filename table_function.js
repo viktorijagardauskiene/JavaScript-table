@@ -87,6 +87,8 @@ function random_color() {
 // panaudoti bootstrap
 // prideti mygtuka Nasujas zaidimas, kuris viska isvalo ir prasideda is naujo
 // paspaudus Naujas zaidimas apacioje sugeneruoja sesis skaitmenis kurie lieka (turetu patikrinti ar iskrite skaiciai sutampa su bilieto skaiciais)
-
+function naujas_zaidimas() {
+	
+}
 
 
