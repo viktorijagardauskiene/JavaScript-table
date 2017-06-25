@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="table_style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="table_function.js"></script>
   <style>
   	.mystyle {
@@ -15,37 +16,50 @@
 
 	<body>
 		<div class="container">
-			<div>
-			<table>
-			      <tr>
-			        <td id="1">1</td>
-			        <td id="2">2</td>
-			        <td id="3">3</td>
-			      </tr>
-			      <tr>
-			        <td id="4">4</td>
-			        <td id="5">5</td>
-			        <td id="6">6</td>
-			      </tr>
-			      <tr>
-			        <td id="7">7</td>
-			        <td id="8">8</td>
-			        <td id="9">9</td>
-			      </tr>
-			</table>
-			</div>
+			<div class="row" style="height: 300px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-4">
+					<table>
+					      <tr>
+					        <td id="1">1</td>
+					        <td id="2">2</td>
+					        <td id="3">3</td>
+					      </tr>
+					      <tr>
+					        <td id="4">4</td>
+					        <td id="5">5</td>
+					        <td id="6">6</td>
+					      </tr>
+					      <tr>
+					        <td id="7">7</td>
+					        <td id="8">8</td>
+					        <td id="9">9</td>
+					      </tr>
+					</table>
+				</div>
 
-			<div id="numeris">
-			Nera
+				<div class="col-md-4" id="numeris" style="height: 300px; text-align: center; padding: 70px; font-size: 50px;">
+				Spausk 'Naujas žaidimas'
+				</div>
+				<div class="col-md-2"></div>
 			</div>
-
-			<div id="sarasas">
-			
+			<div class="row" style="height: 80px; padding: 20px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-4" id="sarasas" style="font-size: 20px; padding: 5px; letter-spacing: 5px"> Išrinktų skaičių nėra			
+				</div>
+				<div class="col-md-4" id="bilieto_numeris" style="font-size: 20px; padding: 5px; letter-spacing: 5px"> Spausk 'Naujas žaidimas' </div>
 			</div>
-
-		<button type="button" onclick="random_spalvos()">Random skaičiai</button>
-		<button type="button" onclick="iseiles_spalvos()">Spalvos iš eilės</button>
-		<button type="button" onclick="naujas_zaidimas()">Naujas žaidimas</button>
+			<div class="col-md-2"></div>
+			<div class="row">
+				
+				<div class="col-md-2">
+					<button type="button" onclick="random_spalvos()">Išrink skaičių</button>
+				</div>
+				<div class="col-md-2">
+					<button type="button" onclick="naujas_zaidimas()">Naujas žaidimas</button>
+				</div>
+				<div class="col-md-8"></div>
+			</div>
 
 
 		</div>

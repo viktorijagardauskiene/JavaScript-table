@@ -1,72 +1,44 @@
-	
-
-
-//	function random_spalvos() {
-//	var x = [document.getElementById("cell_1"), document.getElementById("cell_2"), document.getElementById("cell_3"), document.getElementById("cell_4"), document.getElementById("cell_5"), document.getElementById("cell_6"), document.getElementById("cell_7"), document.getElementById("cell_8"), document.getElementById("cell_9")];
-//	var y = x[Math.floor(Math.random()*x.length)]; // duoda bet kurią x reikšmę
-//			 for (i = 0; i < x.length; i++) {
-//			 	x[i].addEventListener("click", backToRed())
-//					 	function backToRed() {
-//					 		x[i].style.backgroundColor = "red";
-//					 	} // visi langeliai grįžta į raudoną spalvą
-//			 } 
-//	y.style.backgroundColor = "white"; // parenka bet kurį langelį ir pakeičia į baltą
-	
-//	}
-
-	
-//	function iseiles_spalvos() {
-//	var p = [document.getElementById("cell_1"), document.getElementById("cell_2"), document.getElementById("cell_3"), document.getElementById("cell_4"), document.getElementById("cell_5"), document.getElementById("cell_6"), document.getElementById("cell_7"), document.getElementById("cell_8"), document.getElementById("cell_9")];
-//	var z = 0;
-//	var r = p[z];
-	
-//			for (i = 0; i < x.length; i++) {
-//			 	p[i].addEventListener("click", backToRed())
-//					 	function backToRed() {
-//					 		p[i].style.backgroundColor = "red";
-//					 	} // visi langeliai grįžta į raudoną spalvą
-	
-//			 } 
-//	r.style.backgroundColor = "white";
-
-//	}
 // cell id should be number 1-9
+
+function naujas_zaidimas() {
+		for (a = 1; a <= 9; ++a) {
+	 	document.getElementById(a).style.backgroundColor = "red";
+	 } 
+		document.getElementById("numeris").style.backgroundColor = "white";
+		document.getElementById("sarasas").style.backgroundColor = "white";
+		document.getElementById("sarasas").innerHTML = "Išrinktų skaičių nėra";
+		document.getElementById("numeris").innerHTML = "Spausk 'Išrink skaičių'";
+
+	var skaiciai = '123456789'; 
+	var bilieto_nr = 0;
+	for (var i = 0; i <7; i++) {
+		bilieto_nr = skaiciai[Math.floor(Math.random()*9)];
+		}
+	return bilieto_nr;
+	  	document.getElementById("bilieto_numeris").innerHTML = bilieto_nr;
+	 }
+	 
 var SE = [];
 var cell = 0; /* kintamasis cell rasomas virs funkciju kad galiotu abiem, 
 o ne tik vienai. parasyta viduje funkcijos veiks tik toje funkcijoje.*/
+
 function random_spalvos() {
 	 cell = Math.floor(Math.random()*8) +1;
 
 	 for (a = 1; a <= 9; ++a) {
 	 	document.getElementById(a).style.backgroundColor = "red";
 	 } 
+	 var numeris = document.getElementById("numeris");
 	 document.getElementById(cell).style.backgroundColor = random_color();
-	 document.getElementById("numeris").innerHTML = "<h1>" + cell + "</h1>";
+	 numeris.innerHTML = cell;
 	 numeris.style.backgroundColor = random_color();
 
-	 SE.push(cell);				/* prideda isrinkta sakiciu prie eiles galo */
-	 sarasas.innerHTML = SE;
+	 if (SE.length <=5) {
+	 SE.push(cell);			/* prideda isrinkta sakiciu prie eiles galo */
+	 sarasas.innerHTML = SE;} else {
+	 	document.getElementById("numeris").innerHTML = "Žaidimas baigėsi"};
+
 }
-
-function iseiles_spalvos() {
-	if (cell >= 9) {
-		cell = 1;
-	} else {
-		cell = cell + 1;
-	}
-	for (a = 1; a <= 9; ++a) {
-	 	document.getElementById(a).style.backgroundColor = "red";
-	 } 
-	 document.getElementById(cell).style.backgroundColor = random_color();
-		var numeris = document.getElementById("numeris");
-	 			numeris.innerHTML = "<h1>" + cell + "</h1>"; /* uzduotis: kad isrinkto langelio skaicius 
-	 			butu parasytas atskirame div'e - kodo eilute pakeicia div'o reiksme i cell kintamojo reiksme */
-			numeris.style.backgroundColor = random_color();
-	 	SE.push(cell);				/* prideda isrinkta sakiciu prie eiles galo */
-	    sarasas.innerHTML = SE;
-}
-
-
 
 function random_color() {
         var letters = '0123456789ABCDEF'; // masyve yra 16 simboliu
@@ -87,8 +59,7 @@ function random_color() {
 // panaudoti bootstrap
 // prideti mygtuka Nasujas zaidimas, kuris viska isvalo ir prasideda is naujo
 // paspaudus Naujas zaidimas apacioje sugeneruoja sesis skaitmenis kurie lieka (turetu patikrinti ar iskrite skaiciai sutampa su bilieto skaiciais)
-function naujas_zaidimas() {
-	
-}
+
+
 
 

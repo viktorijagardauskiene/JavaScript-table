@@ -3,10 +3,14 @@ td {
 	border-color: black;
 	border: solid;
 	background-color: red;
+	text-align: center;
+	font-size: 50px;
 }
 
 table {
 	border-color: black;
 	border: solid;
+	width: 300px;
+	height: 300px
 }
 
